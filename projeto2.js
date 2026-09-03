@@ -1,6 +1,7 @@
 function temperatura(temp) {
    if (temp >= 15 && temp <= 25) {
       return 'boa'
+      
    }
    else if (temp >= 26 && temp <= 31) {
 
@@ -9,35 +10,53 @@ function temperatura(temp) {
    }
    else if (temp > 31 && temp <= 36) {
 
-      return 'qualidade ruim'
+      return 'ruim'
 
    }
    else if (temp < 15) {
 
-      return 'bom dmaise'
-
+      return 'boa'
    }
    else if (temp > 36) {
 
-      return 'lixo'
+      return 'ruim'
    }
+   else if(temp='boa'){
+      return 3
+   }
+   else if(temp='media'){
+      return 2
+   }
+   else if(temp='ruim'){
+      return 1
+   }
+
 }
 
 
 function Umidade(umi) {
    if (umi < 30) {
-      return "muito seco"
+      return "ruim"
    }
    else if (umi >= 30 && umi <= 39) {
 
-      return "seco"
+      return "ruim"
    }
    else if (umi >= 40 && umi <= 60) {
-      return "umido"
+      return "medio"
 
    }
    else if (umi > 60) {
-      return "muito umido"
+      return "bom"
+   }
+    else if(umi='bom'){
+      return 3
+   }
+   else if(umi='medio'){
+      return 2
+   }
+   else if(umi='ruim'){
+      return 1
    }
 
 }
@@ -45,20 +64,30 @@ function Umidade(umi) {
 function particula(part) {
    if (part >= 0 && part <= 9) {
 
-      return 'qualidade boa'
+      return 'boa'
    }
    else if (part > 9 && part <= 25) {
 
-      return "qualidade media"
+      return "media"
    }
 
    else if (part > 25 && part <= 50) {
 
-      return 'qualidade ruim'
+      return 'ruim'
    }
    else if (part > 50) {
 
-      return 'qualidade muito ruim'
+      return 'ruim'
+   }
+   //tentativa de fazer o calculo para o resultado//
+    else if(part='boa'){
+      return 3
+   }
+   else if(part='medio'){
+      return 2
+   }
+   else if(part='ruim'){
+      return 1
    }
 
 
@@ -77,6 +106,9 @@ function medicao() {
    console.log('temperatura:', temperaturaresult)
    console.log('umidade:', umidaderesult)
    console.log('particulas:', particulasresult)
+}
+function calculo() {
+ //função utilizada para fazer o calculo das qualidades do projeto//
 }
 
 
