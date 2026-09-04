@@ -21,15 +21,7 @@ function temperatura(temp) {
 
       return 'ruim'
    }
-   else if(temp='boa'){
-      return 3
-   }
-   else if(temp='media'){
-      return 2
-   }
-   else if(temp='ruim'){
-      return 1
-   }
+   
 
 }
 
@@ -43,21 +35,13 @@ function Umidade(umi) {
       return "ruim"
    }
    else if (umi >= 40 && umi <= 60) {
-      return "medio"
+      return "media"
 
    }
    else if (umi > 60) {
-      return "bom"
+      return "boa"
    }
-    else if(umi='bom'){
-      return 3
-   }
-   else if(umi='medio'){
-      return 2
-   }
-   else if(umi='ruim'){
-      return 1
-   }
+   
 
 }
 
@@ -80,18 +64,65 @@ function particula(part) {
       return 'ruim'
    }
    //tentativa de fazer o calculo para o resultado//
-    else if(part='boa'){
-      return 3
-   }
-   else if(part='medio'){
-      return 2
-   }
-   else if(part='ruim'){
-      return 1
-   }
+   
 
 
 }
+
+
+let valores=[]
+
+function calculo(temperaturaresult,umidaderesult,particulasresult) {
+ //função utilizada para fazer o calculo das qualidades do projeto//
+ if(temperaturaresult =='boa'){
+     valores[0]=3
+ }
+ else if(temperaturaresult=='media'){
+     valores[0]=2
+ }
+ else if(temperaturaresult=='ruim'){
+    valores[0]= -1
+ }
+ 
+//codigo para tentar trasnformar os valores em numeros//
+ if(umidaderesult=='boa'){
+    valores[1]=3
+ }
+ else if(umidaderesult=='media'){
+    valores[1]= 2
+ }
+ else if(umidaderesult=='ruim'){
+    valores[1]=-1
+ }
+
+ if(particulasresult=='boa'){
+  valores[2]=3
+ }
+ else if(particulasresult=='media'){
+     valores[2]=2
+ }
+ else if(particulasresult=='ruim'){
+   valores[2]= -1
+ }
+ 
+ //calculo das qualidades//
+  qualidade_final=valores[0]+valores[1]+valores[2]
+
+if(qualidade_final>=5) {
+   return qualidade_final='boa'
+}
+else if(qualidade_final>=3 && qualidade_final<=4){
+  return qualidade_final='media'
+}
+else if(qualidade_final<4){
+  return qualidade_final='ruim'
+}
+
+
+
+ }
+
+
 function medicao() {
    let temp = Number(document.getElementById("Temperatura").value)
    let umi = Number(document.getElementById("Umidade").value)
@@ -102,13 +133,12 @@ function medicao() {
    let temperaturaresult = temperatura(temp)
    let umidaderesult = Umidade(umi)
    let particulasresult = particula(part)
+   let qualidade_final=calculo(temperaturaresult,umidaderesult,particulasresult)
 
    console.log('temperatura:', temperaturaresult)
    console.log('umidade:', umidaderesult)
    console.log('particulas:', particulasresult)
-}
-function calculo() {
- //função utilizada para fazer o calculo das qualidades do projeto//
+   console.log('a qualidade é',qualidade_final)
 }
 
 
