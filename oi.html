@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Monitor de Qualidade do Ar</title>
+<link rel="stylesheet" href="oi.css">
+    
+</head>
+
+<body>
+ 
+
+
+
+  <h1 class="font ">Monitor de Qualidade do Ar</h1>
+
+    <p >Insira os dados do ambiente para medir a <br> qualidade do ar.</p>
+
+ <h2>Temperatura (°C)</h2>
+    <input id="Temperatura" type="number" placeholder="Ex: 24">
+
+   <h2>Partículas no ar – PM2.5 (µg/m³)</h2>
+    <input id="Particula" type="number" placeholder="Ex: 35">
+
+   <h2>Umidade (%)</h2>
+    <input id="Umidade" type="number" placeholder="Ex: 55">
+
+     <br>
+    <button onclick="medicao()">Medir qualidade do ar</button>
+    
+    <div id="resultado"></div>
+    <script src="projeto2.js"></script>
+    
+   
+</body>
+</html>

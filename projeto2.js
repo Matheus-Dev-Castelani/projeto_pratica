@@ -109,13 +109,13 @@ function calculo(temperaturaresult,umidaderesult,particulasresult) {
   qualidade_final=valores[0]+valores[1]+valores[2]
 
 if(qualidade_final>=5) {
-   return qualidade_final='boa'
+   return qualidade_final=' a qualidade do ar atualmente está:  boa'
 }
 else if(qualidade_final>=3 && qualidade_final<=4){
-  return qualidade_final='media'
+  return qualidade_final=' a qualidade do ar atualmente está:  média'
 }
 else if(qualidade_final<4){
-  return qualidade_final='ruim'
+  return qualidade_final=' a qualidade do ar atualmente está:  ruim'
 }
 
 
@@ -134,6 +134,8 @@ function medicao() {
    let umidaderesult = Umidade(umi)
    let particulasresult = particula(part)
    let qualidade_final=calculo(temperaturaresult,umidaderesult,particulasresult)
+   let resultado=document.getElementById('resultado')
+    resultado.textContent=qualidade_final
 
    console.log('temperatura:', temperaturaresult)
    console.log('umidade:', umidaderesult)
