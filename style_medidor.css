@@ -28,6 +28,7 @@
             font-size: 20px;
             padding-left: 10px;
             box-sizing: border-box;
+            border-radius: 100px;
         }
 
         button {
@@ -37,6 +38,19 @@
         }
         #resultado{
             font-size: 20px;
+        }
+        .pai_conteiner{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        body{
+            background-color: #f0fff0;
+        }
+        #resultado{
+            width: 200px;
+            height: 300px;
+            background-color:#FFE4C4 ;
         }
         
     

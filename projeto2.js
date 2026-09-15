@@ -73,7 +73,7 @@ function particula(part) {
 let valores=[]
 
 function calculo(temperaturaresult,umidaderesult,particulasresult) {
- //função utilizada para fazer o calculo das qualidades do projeto//
+//codigo para transformar os valores de texto em pontos//
  if(temperaturaresult =='boa'){
      valores[0]=3
  }
@@ -84,7 +84,7 @@ function calculo(temperaturaresult,umidaderesult,particulasresult) {
     valores[0]= -1
  }
  
-//codigo para tentar trasnformar os valores em numeros//
+//codigo para transformar os valores de texto em pontos//
  if(umidaderesult=='boa'){
     valores[1]=3
  }
@@ -122,49 +122,44 @@ else if(qualidade_final<4){
 
  }
 
-
+  
 function medicao() {
+   //pegando o valor do elemento no html e implementando na variavel no js//
    let temp = Number(document.getElementById("Temperatura").value)
    let umi = Number(document.getElementById("Umidade").value)
    let part = Number(document.getElementById("Particula").value)
 
 
-
+   //dando o valor da função para a variavel//
    let temperaturaresult = temperatura(temp)
    let umidaderesult = Umidade(umi)
    let particulasresult = particula(part)
    let qualidade_final=calculo(temperaturaresult,umidaderesult,particulasresult)
-   let resultado=document.getElementById('resultado')
-    resultado.textContent=qualidade_final
+     
+   //localStorag.setItem guarda  o valor de uma variavel em um espaço nomeavel, ex: "valor_tela",qualidade_final. O valor tela é o nome, a qualidade_final é a variavel cujo queremos guardar o valor no espaço nomeavel.
+    localStorage.setItem("valor_tela",qualidade_final)
 
+    //oque vai aparecer no terminal//
    console.log('temperatura:', temperaturaresult)
    console.log('umidade:', umidaderesult)
    console.log('particulas:', particulasresult)
    console.log('a qualidade é',qualidade_final)
 }
+function mostrar(){
+   //resultado: variavel que vai receber o valor guardado
+   let resultado=
 
+   //localstorege.getItem serve para entregar o valor que foi guardado
+    localStorage.getItem("valor_tela");
 
-/*const valores = [];
-function qualidade(n) {
-   switch (n) {
-      case 1: return "muito ruim";
-      case 2: return "ruim";
-      case 3: return "medio";
-      case 4: return "bom";
-      default: return "muito bom";
-   }
+     //a variavel div pega o valor do elemento que possui o id "resultado"
+
+    let div=document.getElementById('resultado');
+
+     div.textContent=resultado
+   
 }
-for (let i = 0; i < 3; i++) {
-   let valor = parseInt(prompt(`valor ${i + 1}: `));
-   valores[i] = valor;
-}
-let total = 0;
-for (let i = 0; i < valores.length; i++) {
-   console.log(`valor ${i + 1}: ${qualidade(valores[i])}`);
-   total += valores[i];
-}
-let avg = Math.ceil(total / valores.length);
-console.log(`resultado final: ${qualidade(avg)}`);*/
+
 
 
 

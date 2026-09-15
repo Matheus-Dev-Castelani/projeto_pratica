@@ -14,3 +14,4 @@
 | `git switch nome`          | Troca de branch                                    |
 | `git switch -c nome`       | Cria e já entra em uma nova branch                 |
 
+prótotipo inicial do projeto dando inicio com um medidor de qualidade de ar

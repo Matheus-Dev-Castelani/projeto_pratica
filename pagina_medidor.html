@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Monitor de Qualidade do Ar</title>
-<link rel="stylesheet" href="oi.css">
+<link rel="stylesheet" href="style_medidor.css">
     
 </head>
 
 <body>
  
 
-
-
+<div class="pai_conteiner">
+   <div  class="conteiner">
   <h1 class="font ">Monitor de Qualidade do Ar</h1>
 
     <p >Insira os dados do ambiente para medir a <br> qualidade do ar.</p>
@@ -26,11 +26,12 @@
     <input id="Umidade" type="number" placeholder="Ex: 55">
 
      <br>
-    <button onclick="medicao()">Medir qualidade do ar</button>
+     <a href="pagina_result.html">
+    <button onclick="medicao()" >Medir qualidade do ar </button>
+      </a>
+  </div>
+</div>
     
-    <div id="resultado"></div>
     <script src="projeto2.js"></script>
-    
-   
 </body>
 </html>

@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #8fbc8f93;
+}
+.local_resultado{
+    width: 500px;
+    height: 300px;
+    background-color: #E6E6FA;
+     border-radius: 20px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+}
+#resultado{
+    display: inline-block;
+   font-weight: bold;
+   font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+   font-size: 20px;
+   background-color: #778899;
+   border-radius: 10px;
+
+    
+}
+.pai_result{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
